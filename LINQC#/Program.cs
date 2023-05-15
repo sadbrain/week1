@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using static System.Console;
 using System.Linq;
 using System.Collections.Generic;
@@ -38,12 +38,12 @@ namespace ArrayList_Exercies
 
             // lọc ra các các contact có address là Ha Noi
             var hn = contacts.Where(c => c.Address == "Ha Noi");
-            foreach (var result in hn) WriteLine($"age: {result.Age} first name: {result.FirstName} last name: {result.LastName} address: {result.Address}");
+            foreach (var result in hn) WriteLine($"first name: {result.FirstName} last name: {result.LastName} address: {result.Address} age: {result.Age}");
 
             WriteLine("------------------------------------------------");
             //lọc ra contact có vị trí lẽ
             var oldLocation = contacts.Where((c,i) => i % 2 != 0);
-            foreach (var result in oldLocation) WriteLine($"age: {result.Age} first name: {result.FirstName} last name: {result.LastName} address: {result.Address}");
+            foreach (var result in oldLocation) WriteLine($"first name: {result.FirstName} last name: {result.LastName} address: {result.Address} age: {result.Age}");
             WriteLine("------------------------------------------------");
 
             //hàm select có tác dụng lọc và biến đổi obj sang dạng khác
