@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using static System.Console;
 using System.Collections.Generic;
 using System.Linq;
@@ -33,10 +33,17 @@ namespace SortedList_exercies
 
             //kiếm chỉ số thông qua khóa
             WriteLine($"chỉ số của Putin trong danh sách: {people.IndexOfKey("Putin")}");
+
+            var listKeys =  people.Keys;
+            Write("danh sách các khóa của sortedList: ");
+            foreach (var key in listKeys)
+            {
+                Write(key + " - ");
+            }
             ReadKey();
         }
      
-        }
+        
 
     }
     class Person
