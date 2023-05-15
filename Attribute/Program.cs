@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Reflection;
 using static System.Console;
 using System.Reflection;
@@ -29,12 +29,15 @@ namespace Attribute_Exercise
 
 
             //lấy thông tin attribute trong lúc runtime bằng cách sử dụng reflection
+            //class type cung cấp các phương thức láy thông tin của các kiểu dữ liệu
+            //cụ thể ở đây trả về class  MyCustomAttribute hay còn là custom attribute
+            //mỗi phương thức trả về một hay một mảng đối tượng lưu trữ thông tin của mỗi thành viên trong kiễu dữ liệu
             Type type = typeof(MyClass);
-
             //type.GetCustomAttributes(typeof(MyCustomAttribute), true)[0] trả về custom attribute của MyClass
             MyCustomAttribute attribute = (MyCustomAttribute) type.GetCustomAttributes(typeof(MyCustomAttribute), true)[0];
             WriteLine(attribute.Description); 
-         
+          
+
         }
     }
 }
