@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using static System.Console;
 using System.IO;
 using System.Runtime.Serialization.Formatters.Binary;
@@ -18,7 +18,7 @@ namespace P01_Binary
         public string LastName { get; set; } = "";
         public DateTime DateOfBirth { get; set; } = DateTime.Now;
     }
-    class Program
+    class serializationWithJson
     {
         static void Main(string[] args)
         {
@@ -46,7 +46,7 @@ namespace P01_Binary
             using (var stream = File.OpenWrite("data.xml"))
             {
                 // tạo adapter stream loại viết văn bản 
-                var writer = new StreamWriter(stream) { AutoFlush = true};
+                var writer = new StreamWriter(stream) { AutoFlush = true };
                 //tạo một đối tượng của class JsonSerializer
                 var seriallized = new JsonSerializer();
                 //gọi hàm thực hiện việc chuyển đổi obj => mảng byte
