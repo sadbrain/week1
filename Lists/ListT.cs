@@ -1,7 +1,6 @@
-﻿using System;
+using System;
 using static System.Console;
-
-using System.Collections;
+using System.Linq;
 using System.Collections.Generic;
 
 
@@ -50,6 +49,13 @@ namespace ListT_Exercise
             });
             Print(people);
 
+            WriteLine($"số phần tử trong list: {people.Count}");
+            WriteLine($"dung lượng hiện tại của list: {people.Capacity}");
+
+
+            //sắp xếp danh sách theo tuổi
+            WriteLine("xắp sếp theo tuổi: ");
+            Print(people.OrderBy(p => p.Age).ToList());
 
         }
 
